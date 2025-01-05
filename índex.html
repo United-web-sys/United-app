@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gs united</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .form-container input, .form-container textarea, .form-container button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #555;
+        }
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Gs united</h1>
+    <p>Bem-vindo ao portfólio oficial do grupo!</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre Nós</a>
+    <a href="#candidatura">Candidatura</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>O Gs united é um grupo dedicado a Área social propriamente no sector do  solidarismo.</p>
+</section>
+
+<section id="candidatura">
+    <h2>Candidatura</h2>
+    <p>Se você deseja fazer parte do Gs united, preencha o formulário abaixo:</p>
+    <div class="form-container">
+        <form id="form-candidatura">
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            <input type="email" id="email" name="email" placeholder="Seu Email" required>
+            <textarea id="mensagem" name="mensagem" placeholder="Por que você quer entrar no grupo?" rows="5" required></textarea>
+            <button type="submit">Enviar Candidatura</button>
+        </form>
+        <div class="success-message" id="success-message">Sua candidatura foi enviada com sucesso!</div>
+    </div>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Para mais informações, entre em contato conosco:</p>
+    <p>Email:gsunited2021@.com</p>
+    <p>Telefone: +244 942128334</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Gs united. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    // JavaScript para exibir mensagem de sucesso após envio do formulário
+    document.getElementById('form-candidatura').addEventListener('submit', function(event) {
+        event.preventDefault(); // Previne o envio real do formulário
+        document.getElementById('success-message').style.display = 'block'; // Exibe a mensagem de sucesso
+        document.getElementById('form-candidatura').reset(); // Limpa os campos do formulário
+    });
+</script>
+
+</body>
+</html>
